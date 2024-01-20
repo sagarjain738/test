@@ -16,7 +16,7 @@ const SecondChart = ({ records, monthNames }) => {
   return (
     <BarChart
       width={700}
-      height={300}
+      height={400}
       data={records}
       margin={{
         top: 20,

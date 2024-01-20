@@ -15,8 +15,8 @@ const colors = ["#94A89A", "#797D81", "#EFB0A1", "#669bbc"];
 const SecondChart = ({ records, monthNames }) => {
   return (
     <BarChart
-      width={700}
-      height={300}
+      width={500}
+      height={500}
       data={records}
       margin={{
         top: 20,

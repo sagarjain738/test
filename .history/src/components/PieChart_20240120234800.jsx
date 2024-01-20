@@ -3,8 +3,8 @@ import { ResponsivePie } from "@nivo/pie";
 const TotalPieChart = ({ records }) => (
   <div
     style={{
-      height: "32rem",
-      width: "32rem",
+      height: "30rem",
+      width: "30rem",
     }}
   >
     <ResponsivePie

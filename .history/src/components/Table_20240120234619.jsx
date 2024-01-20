@@ -8,26 +8,8 @@ import Paper from "@mui/material/Paper";
 
 export default function BasicTable({ records, monthNames }) {
   return (
-    <TableContainer
-      component={Paper}
-      sx={{
-        minWidth: 450,
-        maxWidth: 850,
-        minHeight: 450,
-        maxHeight: 650,
-        height: 500,
-      }}
-    >
-      <Table
-        sx={{
-          minWidth: 450,
-          maxWidth: 850,
-          minHeight: 450,
-          maxHeight: 650,
-          height: 500,
-        }}
-        aria-label="simple table"
-      >
+    <TableContainer component={Paper}>
+      <Table sx={{ minWidth: 450 }} aria-label="simple table">
         <TableHead>
           <TableRow>
             {monthNames.map((item) => (
