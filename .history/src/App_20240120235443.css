@@ -9,9 +9,8 @@
 .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  max-height: 100vh;
+
   max-width: 100vw;
-  overflow: hidden;
   gap: 2rem;
   padding: 2rem;
 }
@@ -20,9 +19,7 @@
   .container {
     display: flex;
     flex-direction: column;
-    overflow: scroll;
     align-items: center;
     justify-content: center;
-    max-height: max-content;
   }
 }

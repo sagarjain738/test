@@ -15,7 +15,7 @@ function BasicTable({ records, monthNames }) {
         minWidth: 450,
         maxWidth: 850,
         minHeight: 400,
-        maxHeight: 450,
+        maxHeight: 500,
       }}
     >
       <Table
@@ -23,7 +23,7 @@ function BasicTable({ records, monthNames }) {
           minWidth: 450,
           maxWidth: 850,
           minHeight: 400,
-          maxHeight: 450,
+          maxHeight: 500,
         }}
         aria-label="simple table"
       >

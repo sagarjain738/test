@@ -1,11 +1,13 @@
 import {
-  Bar,
   BarChart,
-  CartesianGrid,
-  Legend,
-  Tooltip,
+  Bar,
+  Cell,
   XAxis,
   YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
 } from "recharts";
 import HigherOrder from "./HigherOrder";
 
@@ -37,7 +39,7 @@ const SecondChart = ({ records, monthNames }) => {
 };
 
 const TotalSalesForProduct = HigherOrder(
-  SecondChart,
+  TotalPieChart,
   "Total Sales For Product Chart"
 );
 

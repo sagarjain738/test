@@ -20,9 +20,5 @@
   .container {
     display: flex;
     flex-direction: column;
-    overflow: scroll;
-    align-items: center;
-    justify-content: center;
-    max-height: max-content;
   }
 }

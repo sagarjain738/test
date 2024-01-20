@@ -16,13 +16,9 @@
   padding: 2rem;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 600px) {
   .container {
     display: flex;
     flex-direction: column;
-    overflow: scroll;
-    align-items: center;
-    justify-content: center;
-    max-height: max-content;
   }
 }

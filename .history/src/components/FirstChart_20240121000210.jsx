@@ -3,6 +3,7 @@ import {
   BarChart,
   CartesianGrid,
   Legend,
+  Rectangle,
   Tooltip,
   XAxis,
   YAxis,
@@ -11,14 +12,14 @@ import HigherOrder from "./HigherOrder";
 
 const colors = ["#94A89A", "#797D81", "#EFB0A1", "#669bbc"];
 
-const SecondChart = ({ records, monthNames }) => {
+const FirstChart = ({ records, monthNames }) => {
   return (
     <BarChart
       width={700}
       height={300}
       data={records}
       margin={{
-        top: 20,
+        top: 5,
         right: 30,
         left: 20,
         bottom: 5,
@@ -30,15 +31,17 @@ const SecondChart = ({ records, monthNames }) => {
       <Tooltip />
       <Legend />
       {monthNames.map((month, i) => (
-        <Bar key={i} dataKey={month} stackId="a" fill={colors[i]} />
+        <Bar
+          key={month}
+          dataKey={month}
+          fill={colors[i]}
+          activeBar={<Rectangle fill={colors[i]} stroke="blue" />}
+        />
       ))}
     </BarChart>
   );
 };
 
-const TotalSalesForProduct = HigherOrder(
-  SecondChart,
-  "Total Sales For Product Chart"
-);
+const ProductWiseMont = HigherOrder(FirstChart, "First Chart");
 
-export default TotalSalesForProduct;
+export default ProductWiseMont;

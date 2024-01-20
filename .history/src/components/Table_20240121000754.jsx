@@ -14,16 +14,16 @@ function BasicTable({ records, monthNames }) {
       sx={{
         minWidth: 450,
         maxWidth: 850,
-        minHeight: 400,
-        maxHeight: 450,
+        minHeight: 450,
+        maxHeight: 500,
       }}
     >
       <Table
         sx={{
           minWidth: 450,
           maxWidth: 850,
-          minHeight: 400,
-          maxHeight: 450,
+          minHeight: 450,
+          maxHeight: 500,
         }}
         aria-label="simple table"
       >

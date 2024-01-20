@@ -4,8 +4,8 @@ import HigherOrder from "./HigherOrder";
 const TotalPieChart = ({ records }) => (
   <div
     style={{
-      height: "28rem",
-      width: "28rem",
+      height: "32rem",
+      width: "32rem",
     }}
   >
     <ResponsivePie
