@@ -12,18 +12,6 @@ import HigherOrder from "./HigherOrder";
 const colors = ["#94A89A", "#797D81", "#EFB0A1", "#669bbc"];
 
 const SecondChart = ({ records, monthNames }) => {
-  const renderCustomBarLabel = ({ payload, x, y, width, height, value }) => {
-    return (
-      <text
-        x={x + width / 2}
-        y={y}
-        fill="#666"
-        textAnchor="middle"
-        dy={-6}
-      >{`Total: ${value}`}</text>
-    );
-  };
-
   return (
     <BarChart
       width={700}
@@ -47,7 +35,7 @@ const SecondChart = ({ records, monthNames }) => {
           dataKey={month}
           stackId="a"
           fill={colors[i]}
-          label={renderCustomBarLabel}
+          label={"sagar"}
         />
       ))}
     </BarChart>

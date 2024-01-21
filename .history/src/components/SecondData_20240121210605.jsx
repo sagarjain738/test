@@ -20,7 +20,7 @@ const SecondChart = ({ records, monthNames }) => {
         fill="#666"
         textAnchor="middle"
         dy={-6}
-      >{`Total: ${value}`}</text>
+      >{`value: ${value}`}</text>
     );
   };
 
@@ -47,7 +47,9 @@ const SecondChart = ({ records, monthNames }) => {
           dataKey={month}
           stackId="a"
           fill={colors[i]}
-          label={renderCustomBarLabel}
+          label={(payload, x, y, width, height, value) => (
+            <span>`Total: ${value}`</span>
+          )}
         />
       ))}
     </BarChart>

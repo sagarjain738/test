@@ -20,7 +20,7 @@ const SecondChart = ({ records, monthNames }) => {
         fill="#666"
         textAnchor="middle"
         dy={-6}
-      >{`Total: ${value}`}</text>
+      >{`value: ${value}`}</text>
     );
   };
 

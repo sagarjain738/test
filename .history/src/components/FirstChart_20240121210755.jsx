@@ -3,6 +3,7 @@ import {
   BarChart,
   CartesianGrid,
   Legend,
+  Rectangle,
   Tooltip,
   XAxis,
   YAxis,
@@ -11,26 +12,22 @@ import HigherOrder from "./HigherOrder";
 
 const colors = ["#94A89A", "#797D81", "#EFB0A1", "#669bbc"];
 
-const SecondChart = ({ records, monthNames }) => {
+const FirstChart = ({ records, monthNames }) => {
   const renderCustomBarLabel = ({ payload, x, y, width, height, value }) => {
     return (
-      <text
-        x={x + width / 2}
-        y={y}
-        fill="#666"
-        textAnchor="middle"
-        dy={-6}
-      >{`Total: ${value}`}</text>
+      <text x={x + width / 2} y={y} fill="#666" textAnchor="middle" dy={-6}>
+        {value}
+      </text>
     );
   };
 
   return (
     <BarChart
       width={700}
-      height={300}
+      height={400}
       data={records}
       margin={{
-        top: 20,
+        top: 5,
         right: 30,
         left: 20,
         bottom: 5,
@@ -43,10 +40,10 @@ const SecondChart = ({ records, monthNames }) => {
       <Legend />
       {monthNames.map((month, i) => (
         <Bar
-          key={i}
+          key={month}
           dataKey={month}
-          stackId="a"
           fill={colors[i]}
+          activeBar={<Rectangle fill={colors[i]} stroke="blue" />}
           label={renderCustomBarLabel}
         />
       ))}
@@ -54,9 +51,6 @@ const SecondChart = ({ records, monthNames }) => {
   );
 };
 
-const TotalSalesForProduct = HigherOrder(
-  SecondChart,
-  "Total Sales For Product Chart"
-);
+const ProductWiseMonthlySales = HigherOrder(FirstChart, "First Chart");
 
-export default TotalSalesForProduct;
+export default ProductWiseMonthlySales;
