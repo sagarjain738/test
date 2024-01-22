@@ -49,13 +49,7 @@ export default function ChildChart({ data, month }) {
           activeBar={<Rectangle fill="pink" stroke="blue" />}
         />
       </BarChart>
-      <h2
-        style={{
-          textAlign: "center",
-        }}
-      >
-        {month}
-      </h2>
+      <h2>{month}</h2>
     </>
   );
 }
