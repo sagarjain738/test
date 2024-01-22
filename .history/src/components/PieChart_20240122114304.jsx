@@ -2,6 +2,7 @@ import { ResponsivePie } from "@nivo/pie";
 import HigherOrder from "./HigherOrder";
 import { useEffect, useState } from "react";
 import todalData from "../../Data";
+import { FirstChart } from "./FirstChart";
 import ChildChart from "./ChildChart";
 
 const TotalPieChart = ({ records }) => {
